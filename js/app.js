@@ -84,9 +84,9 @@ Visualizer.prototype = {
             scene = this.scene;
         gui = new dat.GUI(); //the control panel
         controls = new function() {
-            this.capColor = 0xFFFFFF;
-            this.barColor = 0x01FF00;
-            this.ambientColor = 0x0c0c0c;
+            this.capColor = 0xe4e4e4;
+            this.barColor = 0x0067a0;
+            this.ambientColor = 0x404341;
             this.dropSpeed = 0.1;
             this.autoRotate = false;
         };
@@ -292,7 +292,7 @@ Visualizer.prototype = {
             plane,
             planeGeometry,
             planeMaterial,
-            spotLight = new THREE.SpotLight(0xffffff),
+            spotLight = new THREE.SpotLight(0xe4e4e4),
             ambientLight = new THREE.AmbientLight(0x0c0c0c),
             //make the camera movable
             orbitControls = new THREE.OrbitControls(camera);
@@ -333,17 +333,17 @@ Visualizer.prototype = {
         //     color: 0x01FF00
         // });
         var cubeMaterial = new THREE.MeshPhongMaterial({
-            color: 0x01FF00,
-            ambient: 0x01FF00,
-            specular: 0x01FF00,
+            color: 0x0067a0,
+            ambient: 0x0067a0,
+            specular: 0x0067a0,
             shininess: 20,
             reflectivity: 5.5
         });
         var capGeometry = new THREE.CubeGeometry(MWIDTH, 0.5, MTHICKNESS);
         var capMaterial = new THREE.MeshPhongMaterial({
-            color: 0xffffff,
-            ambient: 0x01FF00,
-            specular: 0x01FF00,
+            color: 0xe4e4e4,
+            ambient: 0x0067a0,
+            specular: 0x0067a0,
             shininess: 20,
             reflectivity: 5.5
         });
@@ -381,7 +381,7 @@ Visualizer.prototype = {
         spotLight.position.set(0, 60, 40);
         //spotLight.castShadow = true;
         scene.add(spotLight);
-        var directionalLight = new THREE.DirectionalLight(0xffffff, 0.7);
+        var directionalLight = new THREE.DirectionalLight(0xe4e4e4, 0.7);
         directionalLight.castShadow = true;
         directionalLight.position.set(0, 10, 10);
         scene.add(directionalLight);
